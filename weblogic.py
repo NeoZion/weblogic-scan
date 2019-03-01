@@ -27,7 +27,8 @@ def main():
     
     try:
         version = sys.argv[2]
-    except:
+    except Exception as e:
+        shell.warning(e)
         pass
 
     scanning(sys.argv[1],version)
